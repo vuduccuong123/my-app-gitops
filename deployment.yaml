@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: node-app
-        # SỬA Ở ĐÂY: Thay bằng domain thực tế của bạn
-        image: nexus.tudaolw.io.vn:8085/my-node-app:latest 
+        # ĐÃ SỬA: Bỏ cổng 8085 vì bạn đã dùng Nginx qua 443
+        image: nexus.tudaolw.io.vn/my-node-app:latest 
         ports:
         - containerPort: 3000
       imagePullSecrets:
-      - name: nexus-secret # Tên này phải khớp với lệnh kubectl create secret bên dưới
+      - name: nexus-secret # Tên này phải khớp với cái bạn tạo dưới đây
