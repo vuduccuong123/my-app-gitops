@@ -7,6 +7,6 @@ spec:
     app: node-web
   ports:
     - protocol: TCP
-      port: 80       # Port của Service
-      targetPort: 3000 # Port của App (khớp với Dockerfile)
-  type: NodePort # Hoặc LoadBalancer nếu bạn dùng Cloud
+      port: 80
+      targetPort: 3000
+  type: ClusterIP
