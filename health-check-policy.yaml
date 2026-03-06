@@ -1,0 +1,16 @@
+apiVersion: networking.gke.io/v1
+kind: HealthCheckPolicy
+metadata:
+  name: my-app-health-check
+  namespace: default
+spec:
+  default:
+    config:
+      type: HTTP
+      httpHealthCheck:
+        port: 3000
+        requestPath: /
+  targetRef:
+    group: ""
+    kind: Service
+    name: my-app-service
