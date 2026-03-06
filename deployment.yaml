@@ -17,7 +17,7 @@ spec:
       containers:
       - name: node-app
         # ĐÃ SỬA: Bỏ cổng 8085 vì bạn đã dùng Nginx qua 443
-        image: nexus.tudaolw.io.vn/my-node-app:latest 
+        image: nexus.tudaolw.io.vn/docker-hosted/my-node-app:1
         ports:
         - containerPort: 3000
       imagePullSecrets:
