@@ -6,8 +6,6 @@ metadata:
 spec:
   parentRefs:
   - name: my-app-gateway
-  hostnames:
-  - "tudaolw.io.vn"
   rules:
   - matches:
     - path:
